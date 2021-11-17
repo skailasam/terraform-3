@@ -1,0 +1,71 @@
+{
+  version: "0.0.1",
+  resources: [
+    {
+      aws_resource_name: "aws_iam_group",
+      resource_name: "",
+      resource_identifier: group_name 
+    },
+    {
+      aws_resource_name: ,
+      resource_name: ,
+      resource_identifier: 
+    }
+  ]
+}
+
+
+
+IAM
+
+terraform import aws_iam_group.<group_name> <group_name>
+terraform import aws_iam_instance_profile.<resource_name> <instance_profile_name>
+terraform import aws_iam_policy.<policy_name> <policy_arn>
+terraform import aws_iam_role.<role_name> <role_name>
+terraform import aws_iam_role_policy_attachment.<resource_name> <iam_resource_name>/<policy_arn>
+
+VPC
+
+aws_eip.<resource_name> <allocation_id>
+aws_internet_gateway.<resource_name> <igw_id>
+aws_nat_gateway.<resource_name> <nat_id>
+aws_route.<resource_name> <rtb_id>/<IPv4_dest_CIDR OR IPv6_dest_CIDR>
+aws_route_table.<resource_name> <rtb_id>
+aws_route_table_association.<resource_name> <subnet_id OR igw_id>/<rtb_id>
+aws_security_group.elasticsearch-management
+aws_subnet.<subnet_name> <subnet_id>
+aws_subnet_ids.<resource_name> <??>
+aws_vpc.<vpc_name> <vpc_id>
+
+EC2
+
+aws_lb.services <??>
+
+ECS
+aws_ecs_cluster.development-cluster
+
+Route 53 
+
+aws_route53_record.<resource_name>
+aws_route53_zone.<resource_name>
+
+S3
+
+aws_s3_bucket.<bucket_name>
+aws_s3_bucket_policy.<bucket_policy_name>
+
+Config
+
+aws_config_configuration_recorder_status.config-recorder-status
+aws_config_delivery_channel.config-delivery-channel
+
+Elasticsearch
+aws_elasticsearch_domain.bmd-elasticsearch-2
+
+AWS Envs
+
+aws_caller_identity.current
+aws_region.current
+aws_availability_zones.available
+aws_availability_zones.available
+
